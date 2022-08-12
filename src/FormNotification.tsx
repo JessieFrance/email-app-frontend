@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const FormNotification = ({
   status,
   title,
-  message
+  message,
 }: {
   status: FormStatus;
   title: string;

@@ -1,1 +1,1 @@
-type FormStatus = 'success' | 'pending' | 'error';
+type FormStatus = "success" | "pending" | "error";
