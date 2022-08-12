@@ -33,6 +33,7 @@ const Signup = (): JSX.Element => {
       }, 3000);
       return () => clearTimeout(timer);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [formState.status]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
