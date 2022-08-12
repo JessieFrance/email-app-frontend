@@ -28,7 +28,6 @@ const Signup = (): JSX.Element => {
       const timer = setTimeout(() => {
         setFormState(initialFormState);
 
-        // TODO(jessiefrance) Move this to try/catch
         setEmail("");
         setPassword("");
       }, 3000);
@@ -60,11 +59,15 @@ const Signup = (): JSX.Element => {
           message: "Please check your email inbox and spam folders.",
         });
       } else {
-        // TODO(jessiefrance): adapt error to what comes back from API.
+        const json = await response.json();
+        let message = "Something went wrong";
+        if (json && json.message && typeof json.message === "string") {
+          message = json.message;
+        }
         setFormState({
           status: "error",
           title: "Error",
-          message: "Something went wrong",
+          message: `${message}`,
         });
       }
     } catch (err) {
