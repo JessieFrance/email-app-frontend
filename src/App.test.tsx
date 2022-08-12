@@ -1,9 +1,16 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders Signup", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const title = screen.getByText("Sign Up");
+  const email = screen.getByText("Email address");
+  const password = screen.getByText("Password");
+  const submit = screen.getByText("Submit");
+
+  expect(title).toBeInTheDocument();
+  expect(email).toBeInTheDocument();
+  expect(password).toBeInTheDocument();
+  expect(submit).toBeInTheDocument();
 });
