@@ -14,6 +14,12 @@ const initialFormState: FormAlertType = {
   message: "",
 };
 
+const isStringArray = (arr: any): arr is string[] => {
+  return (
+    Array.isArray(arr) && arr.every((element) => typeof element === "string")
+  );
+};
+
 const Signup = (): JSX.Element => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -64,6 +70,8 @@ const Signup = (): JSX.Element => {
         let message = "Something went wrong";
         if (json && json.message && typeof json.message === "string") {
           message = json.message;
+        } else if (json && isStringArray(json.message)) {
+          message = (json.message as string[]).join(", and ");
         }
         setFormState({
           status: "error",
