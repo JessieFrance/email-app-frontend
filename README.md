@@ -1,5 +1,7 @@
 # Cope Notes Email App Frontend
 
+[![Actions Status](https://github.com/JessieFrance/cope-notes-frontend/workflows/Build%20and%20Test/badge.svg)](https://github.com/JessieFrance/cope-notes-frontend/actions)
+
 This is the frontend user interface (UI) for a coding challenge. To use this UI in development:
 
 1. Install dependencies with `npm ci`
