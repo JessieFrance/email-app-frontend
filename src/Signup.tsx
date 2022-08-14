@@ -33,9 +33,6 @@ const Signup = (): JSX.Element => {
     } else {
       const timer = setTimeout(() => {
         setFormState(initialFormState);
-
-        setEmail("");
-        setPassword("");
       }, 3000);
       return () => clearTimeout(timer);
     }
@@ -65,6 +62,8 @@ const Signup = (): JSX.Element => {
           title: "Success!",
           message: "Please check your email inbox and spam folders.",
         });
+        setEmail("");
+        setPassword("");
       } else {
         const json = await response.json();
         let message = "Something went wrong";
@@ -78,6 +77,8 @@ const Signup = (): JSX.Element => {
           title: "Error",
           message: `${message}`,
         });
+        setEmail("");
+        setPassword("");
       }
     } catch (err) {
       setFormState({
@@ -85,6 +86,8 @@ const Signup = (): JSX.Element => {
         title: "Error",
         message: "Something went wrong",
       });
+      setEmail("");
+      setPassword("");
     }
   };
 
