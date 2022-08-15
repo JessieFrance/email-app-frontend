@@ -6,7 +6,7 @@ This is the frontend user interface (UI) for an experimental email scheduler. To
 
 1. Clone this repository.
 
-2. Install dependencies with `npm ci`. If you do not have `npm` installed, please install [Node.js and NPM](https://nodejs.org/en/). If you encounter any issues here but you have `node` installed, it may be a result of your Node.js version (type `node -v` in the terminal to check), as this project was developed using Node.js version `v16.14.0`. To change Node.js version to the one in this project, you can use the [Node Version Manager (NVM)](https://github.com/nvm-sh/nvm) package.
+2. Install dependencies with `npm ci`. If you do not have `npm` installed, please install [Node.js and NPM](https://nodejs.org/en/). If you encounter any issues here but you have `node` installed, it may be a result of your Node.js version (type `node -v` in the terminal to check), as this project was developed using Node.js version `v16.14.0`. To change the Node.js version to the one in this project, you can use the [Node Version Manager (NVM)](https://github.com/nvm-sh/nvm) package.
 
 3. Make sure the [backend API](https://github.com/JessieFrance/email-app) and its database are running (please see instructions at that link).
 
